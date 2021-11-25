@@ -3,7 +3,9 @@ import React from "react";
 function Navbar(props) {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <nav
+        className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}
+      >
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             Textutils
@@ -22,7 +24,7 @@ function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="/">
+                <a className={"nav-link active"} aria-current="page" href="/">
                   Home
                 </a>
               </li>
@@ -33,6 +35,19 @@ function Navbar(props) {
               </li>
             </ul>
           </div>
+        </div>
+        <div
+          className={`form-check form-switch text-${
+            props.mode === "light" ? "dark" : "light"
+          } mx-3`}
+        >
+          <input
+            className="form-check-input"
+            type="checkbox"
+            role="switch"
+            onClick={props.toggleMode}
+          />
+          <label className="form-check-label">LightMode</label>
         </div>
       </nav>
     </div>
