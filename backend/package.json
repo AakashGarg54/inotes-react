@@ -18,6 +18,9 @@
   "homepage": "https://github.com/AakashGarg54/inotes-react#readme",
   "dependencies": {
     "express": "^4.17.2",
-    "mongoose": "^6.1.9"
+    "mongoose": "^6.1.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
+// C:\Users\aakas\Downloads\Files\Programs\'Web Developer'\'React JS'\'Basics to advance'\inotes
+
 function App() {
   return (
     <div className="App">
